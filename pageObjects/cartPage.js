@@ -20,7 +20,7 @@ export class CartPage extends Base {
    * @param {string} params.prodPrice - The expected product price.
    */
   async verifyProductPrice({ index, prodPrice }) {
-    const productCard = await this.productList.nth(index);
+    const productCard = await this.productList.nth(index).locator('[class*="cartProductDetailItem_new_price"]');
     console.log(`Verifying product price is ${prodPrice}`);
     await expect.soft(productCard).toContainText(prodPrice);
   }
