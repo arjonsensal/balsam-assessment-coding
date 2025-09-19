@@ -1,0 +1,25 @@
+{
+  "name": "balsam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "set ENVIRONMENT=prod& npx playwright test --project=chrome",
+    "test:dev": "set ENVIRONMENT=dev& npx playwright test --project=chrome",
+    "test:staging": "set ENVIRONMENT=staging& npx playwright test --project=chrome",
+    "test-ui": "set ENVIRONMENT=prod& npx playwright test --project=chrome --ui",
+    "test-headed": "set ENVIRONMENT=prod& npx playwright test --project=chrome --headed",
+    "test-firefox": "set ENVIRONMENT=prod& npx playwright test --project=firefox",
+    "test-webkit": "set ENVIRONMENT=prod& npx playwright test --project=webkit --ui",
+    "test-chrome": "set ENVIRONMENT=prod& npx playwright test --project=chrome",
+    "test-edge": "set ENVIRONMENT=prod& npx playwright test --project=edge",
+    "test-all-browser": "set ENVIRONMENT=prod& npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^17.2.2"
+  }
+}
